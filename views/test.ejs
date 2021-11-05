@@ -20,27 +20,28 @@
   <div class="form-group">
     <label><i class="fas fa-link"></i> Long URL</label>
    <input type="text" class="form-control text-secondary" style="color: white;" value="<%= long %>" readonly>
-    <small class="form-text text-muted">For now the original URL will be visible to everyone...<br>It will continue to be developed until the URL you enter is completely Private!</small>
   </div>
-  
+  <div class="form-group">
     <label><i class="fas fa-pencil-alt"></i> CodeNime URL</label>
-   
     <div class="form-group" id="app-6">
       <input type="text" class="form-control text-secondary" style="color: white;" value="https://url.codenime.xyz/<%= alias %>" readonly>
-
+</div>
+<div class="form-group">
+      <label><i class="fas fa-trash"></i> Remove ID</label>
+    <div class="form-group" id="app-6">
+      <input type="text" class="form-control text-secondary" style="color: white;" value="<%= id %>" readonly>
+      <small class="form-text text-muted">You can use remove id to remove the shortlink you created...<br>People who know your remove id they can just delete it using this remove id key... Take care!</small>
+</div>
      
 
   
 
   </div>
-  
 
 </form>
-<a href="https://url.codenime.xyz"><button class="btn btn-primary">Back To Home</button></a>
-<a href="https://url.codenime.xyz/delete"><button class="btn btn-primary">Remove URL?</button></a>
-
-  
   </div>
+  <a href="https://url.codenime.xyz"><button class="btn btn-primary">Back To Home</button></a>
+<a href="https://url.codenime.xyz/delete"><button class="btn btn-primary">Remove URL?</button></a>
 </div>
             
             
