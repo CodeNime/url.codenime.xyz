@@ -5,6 +5,9 @@ URL Shortener maybe? Di buat dengan Expressjs, MongoDB dan sedikit html framewor
 - Rapikan kode (berantakan banget banh)
 - Layout
 
+# Demo
+https://url.codenime.xyz
+
 # Setup
 - Isi ```example.env``` untuk link database MongoDB nya (setelah diisi ganti nama file jadi ```.env```) 
 - ```npm i``` di terminal
