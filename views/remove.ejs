@@ -18,21 +18,17 @@
   <div class="card-body">
     <form action="remove" method="POST">
   <h5 class="card-title text-center">Remove It? <i class="fas fa-flushed text-warning"></i></h5>
-    <label><i class="fas fa-trash-alt"></i> Alias Code</label>
-   
-    <div class="form-group form-inline" id="app-6">
-      <input type="text" class="form-control col-md-4" placeholder="url.codenime.xyz" style="color: white;cursor: not-allowed;" readonly>
 
-  <input class="form-control" type="text" name="shortcode" maxlength="16" placeholder="alias *" v-model="pesan" id="alias" required>
+ <label><i class="fas fa-trash"></i> Remove ID</label>
 
-
-  </div>
-  
+ <input class="form-control mb-4" type="text" name="removeid" maxlength="8" placeholder="remove id *" v-model="pesan" id="removeid" required>
+ 
   <button type="submit" class="btn btn-primary mb-2">Remove</button>
+  
+  
 </form>
 <a href="https://url.codenime.xyz"><button class="btn btn-primary">Back To Home</button></a>
-  </div>
-</div>
+
             
             
      </div>
@@ -77,7 +73,7 @@ function areyousure() {
  <script>
 Swal.fire(
   'Typo?',
-  'Incorrect Alias ​​Code To Delete...',
+  'Incorrect Remove ID To Delete...',
   'question'
 )
 </script>
