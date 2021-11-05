@@ -2,9 +2,8 @@
 URL Shortener maybe? Di buat dengan Expressjs, MongoDB dan sedikit html framework lainnya...
 
 # To Do
-- Rapikan kode (berantakan banget banh)
 - Layout
-- Masih banyak celah di fitur remove
+- Masih banyak celah di fitur (add captcha)
 
 # Demo
 https://url.codenime.xyz
