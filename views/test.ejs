@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeNime - URL</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body class="">
+ 
+     
+     <div class="d-flex justify-content-center">
+       
+
+            <div class="card">
+  <div class="card-body">
+    <form>
+  <div class="form-group">
+    <label><i class="fas fa-link"></i> Long URL</label>
+   <input type="text" class="form-control text-secondary" style="color: white;" value="<%= long %>" readonly>
+    <small class="form-text text-muted">For now the original URL will be visible to everyone...<br>It will continue to be developed until the URL you enter is completely Private!</small>
+  </div>
+  
+    <label><i class="fas fa-pencil-alt"></i> CodeNime URL</label>
+   
+    <div class="form-group" id="app-6">
+      <input type="text" class="form-control text-secondary" style="color: white;" value="https://url.codenime.xyz/<%= alias %>" readonly>
+
+     
+
+  
+
+  </div>
+  
+
+</form>
+<a href="https://url.codenime.xyz"><button class="btn btn-primary">Back To Home</button></a>
+<a href="https://url.codenime.xyz/delete"><button class="btn btn-primary">Remove URL?</button></a>
+
+  
+  </div>
+</div>
+            
+            
+     </div>
+      
+
+
+         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+          <script>
+          var app6 = new Vue({
+  el: '#app-6',
+  data: {
+    pesan: ''
+  }
+})</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.2/sweetalert2.all.min.js"></script>
+      
+<% if (isAdded) { %>
+ <script>
+ Swal.fire(
+     'Good job!',
+     'Data saved. Your new url is <b>https://url.codenime.xyz/<%= alias %></b>',
+     'success'
+ )
+
+ 
+</script>
+<% } %>
+<!--
+<script>
+const pageAccessedByReload = (
+  (window.performance.navigation && window.performance.navigation.type === 1) ||
+    window.performance
+      .getEntriesByType('navigation')
+      .map((nav) => nav.type)
+      .includes('reload')
+);
+
+Swal.fire(
+  'Refresh?',
+  'You are trying to refresh this page, This will create a new shortlink for your current long url and will generate double shortlink, you should not do that... If you want to create a new shortlink you can go to the Home page!',
+  'question'
+)
+
+const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger'
+  },
+  buttonsStyling: false
+})
+
+swalWithBootstrapButtons.fire({
+  title: 'Are you sure?',
+  text: "You are trying to refresh this page, This will create a new shortlink for your current long url and will generate double shortlink, you should not do that... If you want to create a new shortlink you can go to the Home page!",
+  icon: 'question',
+  showCancelButton: true,
+  confirmButtonText: 'Home Page!',
+  cancelButtonText: 'Refresh it!',
+  reverseButtons: false
+}).then((result) => {
+  if (result.isConfirmed) {
+   /* swalWithBootstrapButtons.fire(
+      'Deleted!',
+      'Your file has been deleted.',
+      'success'
+    )*/
+    location.href = "/"
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire(
+      'Cancelled',
+      'Your imaginary file is safe :)',
+      'error'
+    )
+  }
+})
+</script>
+-->
+</body>
+</html>

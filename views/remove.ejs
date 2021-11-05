@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeNime - URL</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body class="">
+ 
+     
+     <div class="d-flex justify-content-center">
+      
+
+            <div class="card">
+  <div class="card-body">
+    <form action="remove" method="POST">
+  <h5 class="card-title text-center">Remove It? <i class="fas fa-flushed text-warning"></i></h5>
+    <label><i class="fas fa-trash-alt"></i> Alias Code</label>
+   
+    <div class="form-group form-inline" id="app-6">
+      <input type="text" class="form-control col-md-4" placeholder="url.codenime.xyz" style="color: white;cursor: not-allowed;" readonly>
+
+  <input class="form-control" type="text" name="shortcode" maxlength="16" placeholder="alias *" v-model="pesan" id="alias" required>
+
+
+  </div>
+  
+  <button type="submit" class="btn btn-primary mb-2">Remove</button>
+</form>
+<a href="https://url.codenime.xyz"><button class="btn btn-primary">Back To Home</button></a>
+  </div>
+</div>
+            
+            
+     </div>
+      
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.2/sweetalert2.all.min.js"></script>
+      
+<!--<script>
+function areyousure() {
+   Swal.fire({
+  title: 'Submit your Github username',
+  input: 'text',
+  inputAttributes: {
+    autocapitalize: 'off'
+  },
+  showCancelButton: true,
+  confirmButtonText: 'Look up',
+  showLoaderOnConfirm: true,
+  preConfirm: () => {
+    return fetch(`//url.codenime.xyz/remove`, {method: 'POST'})
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response.statusText)
+        }
+        return Swal.fire(
+  'Success!',
+  'Successfully removed your CodeNime url from database!',
+  'success'
+)
+      })
+      .catch(error => {
+        Swal.showValidationMessage(
+          `Request failed: ${error}`
+        )
+      })
+  },
+  allowOutsideClick: () => !Swal.isLoading()
+})
+</script>-->
+<% if (aliasnull) { %>
+ <script>
+Swal.fire(
+  'Typo?',
+  'Incorrect Alias ​​Code To Delete...',
+  'question'
+)
+</script>
+<% } %>
+</body>
+</html>
