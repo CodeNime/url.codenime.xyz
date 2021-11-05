@@ -24,6 +24,17 @@ var checkForSpecialChar = function (string) {
   return false;
 };
 
+function makeid(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+}
+
 let counting = db.fetch(`shorted`);
 
 setInterval(function () {
@@ -55,7 +66,7 @@ app.get("/", async (req, res) => {
 });
 
 app.get("/test", async (req, res) => {
-  res.render("test", { isAdded: true, long: "test", alias: "testing" });
+  res.render("test", { isAdded: true, long: "test", alias: "testing", id: makeid(8) });
 });
 
 app.get("/delete", async (req, res) => {
@@ -76,6 +87,8 @@ app.post("/short", async (req, res) => {
   var shortnya = req.body.short;
 
   const inisudahada = await inidb.findOne({ shorted: shortnya });
+
+  var iddelete = makeid(8)
 
   if (inisudahada) {
     res.render("index", {
@@ -99,23 +112,25 @@ app.post("/short", async (req, res) => {
     const pushtodb = {
       url: urlnya,
       shorted: shortnya,
+      id: iddelete
     };
 
     inidb.insert(pushtodb),
-      res.render("test", { isAdded: true, long: urlnya, alias: shortnya }),
+      res.render("test", { isAdded: true, long: urlnya, alias: shortnya, id: iddelete }),
       db.add("shorted", 1);
   }
 });
 
 app.post("/remove", async (req, res) => {
   var codeshort = req.body.shortcode;
+  var removeid = req.body.removeid;
 
-  const check = await inidb.findOne({ shorted: codeshort });
+  const check = await inidb.findOne({ id: removeid });
 
   if (check == null) {
     res.render("remove", { aliasnull: true });
   } else {
-    inidb.findOneAndDelete({ shorted: codeshort }),
+    inidb.findOneAndDelete({ id: removeid }),
       res.render("index", {
         deleted: true,
         aliasnull: false,
