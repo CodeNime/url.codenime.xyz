@@ -4,6 +4,7 @@ URL Shortener maybe? Di buat dengan Expressjs, MongoDB dan sedikit html framewor
 # To Do
 - Rapikan kode (berantakan banget banh)
 - Layout
+- Masih banyak celah di fitur remove
 
 # Demo
 https://url.codenime.xyz
