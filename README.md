@@ -3,7 +3,7 @@ URL Shortener maybe? Di buat dengan Expressjs, MongoDB dan sedikit html framewor
 
 # To Do
 - Layout
-- Masih banyak celah di fitur (add captcha)
+- Masih banyak celah di fitur remove (next add captcha)
 
 # Demo
 https://url.codenime.xyz
