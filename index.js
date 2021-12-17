@@ -4,6 +4,7 @@ var bodyParser = require("body-parser");
 const Swal = require("sweetalert2");
 const Collect = require("@supercharge/collections");
 const db = require("quick.db");
+require('dotenv').config()
 
 app.use(bodyParser());
 app.set("json spaces", 2);
